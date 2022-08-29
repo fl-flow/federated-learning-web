@@ -56,7 +56,7 @@ export const AlgoNode: NsGraph.INodeRender = (props) => {
       <span className="icon">
         <DatabaseOutlined style={fontStyle} />
       </span>
-      <span className="label">{props.data.label}</span>
+      <span className="label"> {props.data.label}</span>
       <span className="status">
         <AlgoIcon
           status={props.data && props.data.status}

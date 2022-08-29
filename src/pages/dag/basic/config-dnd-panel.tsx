@@ -40,7 +40,7 @@ export const nodeDataService: NsNodeCollapsePanel.INodeDataService = async (
   return [
     {
       id: '数据读写',
-      header: '数据读写',
+      header: '节点',
       children: [
         {
           id: '2',
@@ -62,54 +62,6 @@ export const nodeDataService: NsNodeCollapsePanel.INodeDataService = async (
           parentId: '1',
           renderKey: DND_RENDER_ID,
           popoverContent: <NodeDescription name="算法组件3" />,
-        },
-      ],
-    },
-    {
-      id: '数据加工',
-      header: '数据加工',
-      children: [
-        {
-          id: '6',
-          label: '算法组件4',
-          parentId: '5',
-          renderKey: DND_RENDER_ID,
-        },
-        {
-          id: '7',
-          label: '算法组件5',
-          parentId: '5',
-          renderKey: DND_RENDER_ID,
-        },
-        {
-          id: '8',
-          label: '算法组件6',
-          parentId: '5',
-          renderKey: DND_RENDER_ID,
-        },
-      ],
-    },
-    {
-      id: '模型训练',
-      header: '模型训练',
-      children: [
-        {
-          id: '6',
-          label: '算法组件4',
-          parentId: '5',
-          renderKey: DND_RENDER_ID,
-        },
-        {
-          id: '7',
-          label: '算法组件5',
-          parentId: '5',
-          renderKey: DND_RENDER_ID,
-        },
-        {
-          id: '8',
-          label: '算法组件6',
-          parentId: '5',
-          renderKey: DND_RENDER_ID,
         },
       ],
     },

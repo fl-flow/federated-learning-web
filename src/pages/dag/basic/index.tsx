@@ -14,6 +14,7 @@ import {
   CanvasSnapline,
   CanvasNodePortTooltip,
   DagGraphExtension,
+  CanvasMiniMap,
 } from '@antv/xflow';
 
 /** app 组件配置  */
@@ -106,6 +107,7 @@ export const Demo: React.FC<IProps> = (props) => {
         <CanvasScaleToolbar position={{ top: 12, right: 12 }} />
         <CanvasContextMenu config={menuConfig} />
         <CanvasSnapline color="#faad14" />
+        <CanvasMiniMap minimapOptions={{ width: 200, height: 120 }} />
         <CanvasNodePortTooltip />
       </XFlowCanvas>
       <JsonSchemaForm
