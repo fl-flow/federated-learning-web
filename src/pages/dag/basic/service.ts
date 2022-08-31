@@ -19,6 +19,16 @@ export namespace MockApi {
       return { ...args, flowId: args.meta.flowId };
     };
   /** 加载图数据的api */
+
+  /** ports {
+    node 每一个对象为一个渲染出的节点
+    node [ports]中每个对象为一个接口:
+        type:接口类型(输入还是输出)
+        group:接口位置
+      
+  
+
+  */
   export const loadGraphData = async (meta: NsGraph.IGraphMeta) => {
     const nodes: NsGraph.INodeConfig[] = [
       {
@@ -28,6 +38,12 @@ export namespace MockApi {
         ports: [
           {
             id: 'node1-input-1',
+            type: NsGraph.AnchorType.INPUT,
+            group: NsGraph.AnchorGroup.TOP,
+            tooltip: '输入桩',
+          },
+          {
+            id: 'node1-input-2',
             type: NsGraph.AnchorType.INPUT,
             group: NsGraph.AnchorGroup.TOP,
             tooltip: '输入桩',

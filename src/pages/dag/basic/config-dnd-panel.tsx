@@ -32,6 +32,21 @@ const NodeDescription = (props: { name: string }) => {
   );
 };
 
+const NodeDemo = (props: { name: string }) => {
+  return (
+    <Card
+      size="small"
+      title="巴啦啦"
+      style={{ width: '200px' }}
+      bordered={false}
+    >
+      欢迎使用：{props.name}
+      这里可以根据服务端返回的数据显示不同的内容
+    </Card>
+  );
+};
+
+// childdren[popoverContent] 配置预览组件
 export const nodeDataService: NsNodeCollapsePanel.INodeDataService = async (
   meta,
   modelService,
@@ -62,6 +77,13 @@ export const nodeDataService: NsNodeCollapsePanel.INodeDataService = async (
           parentId: '1',
           renderKey: DND_RENDER_ID,
           popoverContent: <NodeDescription name="算法组件3" />,
+        },
+        {
+          id: '4',
+          label: '巴啦啦',
+          parentId: '1',
+          renderKey: DND_RENDER_ID,
+          popoverContent: <NodeDemo name="巴啦啦" />,
         },
       ],
     },

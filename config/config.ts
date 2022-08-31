@@ -16,12 +16,12 @@ export default defineConfig({
       icon: 'SmileOutlined',
       component: '@/pages/dag/basic',
     },
-    {
-      name: 'dag-dynamic-ports',
-      path: '/dag-dynamic-ports',
-      icon: 'SmileOutlined',
-      component: '@/pages/dag/dynamic-ports',
-    },
+    // {
+    //   name: 'dag-dynamic-ports',
+    //   path: '/dag-dynamic-ports',
+    //   icon: 'SmileOutlined',
+    //   component: '@/pages/dag/dynamic-ports',
+    // },
     {
       name: 'home',
       path: '/home',

@@ -1,4 +1,5 @@
 import React from 'react';
+
 /** app 核心组件 */
 import { XFlow, XFlowCanvas, KeyBindings } from '@antv/xflow';
 import type { IApplication, IAppLoad } from '@antv/xflow';
@@ -39,8 +40,8 @@ import {
   controlMapService,
 } from './config-form';
 
-import './index.less';
 import '@antv/xflow/dist/index.css';
+import './index.less';
 
 export interface IProps {
   meta: { flowId: string };
@@ -55,7 +56,7 @@ export const Demo: React.FC<IProps> = (props) => {
   const modelServiceConfig = useModelServiceConfig();
   const keybindingConfig = useKeybindingConfig();
 
-  const cache = React.useMemo<{ app: IApplication } | null>(
+  const cache = React.useMemo<{ app: IApplication | null }>(
     () => ({
       app: null,
     }),
@@ -97,12 +98,15 @@ export const Demo: React.FC<IProps> = (props) => {
         footerPosition={{ height: 0 }}
         bodyPosition={{ top: 40, bottom: 0, left: 0 }}
       />
+
+      {/* Canvas 工具栏 */}
       <CanvasToolbar
         className="xflow-workspace-toolbar-top"
         layout="horizontal"
         config={toolbarConfig}
         position={{ top: 0, left: 230, right: 290, bottom: 0 }}
       />
+
       <XFlowCanvas position={{ top: 40, left: 230, right: 290, bottom: 0 }}>
         <CanvasScaleToolbar position={{ top: 12, right: 12 }} />
         <CanvasContextMenu config={menuConfig} />
@@ -110,6 +114,8 @@ export const Demo: React.FC<IProps> = (props) => {
         <CanvasMiniMap minimapOptions={{ width: 200, height: 120 }} />
         <CanvasNodePortTooltip />
       </XFlowCanvas>
+
+      {/* 右侧配置表单 */}
       <JsonSchemaForm
         controlMapService={controlMapService}
         formSchemaService={formSchemaService}
