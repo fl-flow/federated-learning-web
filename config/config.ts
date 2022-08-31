@@ -22,6 +22,12 @@ export default defineConfig({
       icon: 'SmileOutlined',
       component: '@/pages/dag/dynamic-ports',
     },
+    {
+      name: 'home',
+      path: '/home',
+      icon: 'SmileOutlined',
+      component: '@/pages/home',
+    },
   ],
   // mfsu: {},
   fastRefresh: {},
